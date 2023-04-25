@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class = "navbar-nav">
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="home-page" class="nav-link">HomePage</a>
+        </li>  
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="about-us" class="nav-link">About-us</a>
+        </li>  
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="contact-us" class="nav-link">contact-us</a>
+        </li>  
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedback" class="nav-link">feedback</a>
+        </li> 
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="profile-card" class="nav-link">profilecard</a>
+        </li>
+        <li class = "nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/airlineDetails" class="nav-link">Airline List</a>
+          <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+        </li>
+        <li class = "nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/create-airline-details" class="nav-link">Add Airline</a>
+          <!--  <a routerLink="create-employee" routerLinkActive="active" class="nav-link" >Add Employee</a>-->
+        </li>
+        <li>
+            <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link">Login</a>
+        </li>
+        <li>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="nav-link">LogOut</a>
+        </li>  
+            
+    </ul>
+    
+</nav>
+
+
+    <router-outlet></router-outlet>
+
